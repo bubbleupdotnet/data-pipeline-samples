@@ -32,6 +32,8 @@ echo
 echo
 echo "Current mount points:"
 mount
+echo
+echo
 
 # we need to decrement retain because we start counting with 0 and we need to remove the oldest backup
 let "retain=$retain-1"
