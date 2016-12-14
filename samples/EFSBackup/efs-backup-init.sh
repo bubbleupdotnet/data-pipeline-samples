@@ -28,6 +28,11 @@ if [ ! -d /mnt/backups ]; then
   ls /mnt/backups
 fi
 
+echo
+echo
+echo "Current mount points:"
+mount
+
 # we need to decrement retain because we start counting with 0 and we need to remove the oldest backup
 let "retain=$retain-1"
 if sudo test -d /mnt/backups/$efsid/$interval.$retain; then
