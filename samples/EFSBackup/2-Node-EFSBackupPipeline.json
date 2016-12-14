@@ -133,7 +133,7 @@
         },
         {
             "id": "myImageId",
-            "default": "ami-de3860c9",
+            "default": "ami-b73b63a0",
             "description": "AMI to use for the task runners",
             "type": "String"
         },
