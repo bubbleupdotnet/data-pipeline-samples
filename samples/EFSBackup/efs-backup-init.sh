@@ -16,12 +16,16 @@ if [ ! -d /backup ]; then
   sudo mkdir /backup
   echo "sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $source /backup"
   sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $source /backup
+  echo "Directories to back up:"
+  ls /backup
 fi
 if [ ! -d /mnt/backups ]; then
   echo 'sudo mkdir /mnt/backups'
   sudo mkdir /mnt/backups
   echo "sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $destination /mnt/backups"
   sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $destination /mnt/backups
+  echo "Existing backup directories:"
+  ls /mnt/backups
 fi
 
 # we need to decrement retain because we start counting with 0 and we need to remove the oldest backup
