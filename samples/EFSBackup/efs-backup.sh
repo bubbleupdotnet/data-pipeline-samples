@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Example would be to run this script as follows:
 # Every 6 hours; retain last 4 backups
 # efs-backup.sh $src $dst hourly 4 efs-12345
