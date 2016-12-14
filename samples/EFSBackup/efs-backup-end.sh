@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Input arguments
 interval=$1
