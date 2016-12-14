@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Initialization of EFS backup
 grep CONFIG_NFS_V4_1 /boot/config*
 
