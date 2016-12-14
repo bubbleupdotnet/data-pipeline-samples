@@ -16,6 +16,7 @@ if [ ! -d /backup ]; then
   sudo mkdir /backup
   echo "sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $source /backup"
   sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $source /backup
+  echo "Mount exit code: $?"
   echo "Directories to back up:"
   ls /backup
 fi
@@ -24,6 +25,7 @@ if [ ! -d /mnt/backups ]; then
   sudo mkdir /mnt/backups
   echo "sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $destination /mnt/backups"
   sudo mount -t nfs -o nfsvers=4.1 -o rsize=1048576 -o wsize=1048576 -o timeo=600 -o retrans=2 -o hard $destination /mnt/backups
+  echo "Mount exit code: $?"
   echo "Existing backup directories:"
   ls /mnt/backups
 fi
