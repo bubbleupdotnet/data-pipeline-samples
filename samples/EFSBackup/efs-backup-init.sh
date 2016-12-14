@@ -1,5 +1,6 @@
 #!/bin/bash
 # Initialization of EFS backup
+grep CONFIG_NFS_V4_1 /boot/config*
 
 # Input arguments
 source=$1
